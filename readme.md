@@ -1,3 +1,18 @@
+# AImage
+```json
+{
+    "mod":"AImage",
+    "author":"简律纯,Stardust·减",
+    "ver":"1.1.0",
+    "dice_build":612,
+    "brief":"AI作画",
+    "comment":"",
+    "repo":"https://ghproxy.com/https://github.com/ssJSKFJDJ/AImage.git",
+    "helpdoc":{
+        "AImage":"AImage v1.1.0\n【.naifu:tags】与【/delete】\ngithub:https://github.com/ssJSKFJDJ/AImage/tree/master"
+    }
+}
+```
 ### [Lua脚本版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/1)
 1. 下载。
 2. 修改后缀为`.lua`并放入`DiceQQ\plugin\`文件夹下。
