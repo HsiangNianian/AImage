@@ -1,4 +1,5 @@
-[![](https://img.shields.io/github/last-commit/cypress0522/AImage)](https://github.com/cypress0522/AImage/commits/main)[![](https://img.shields.io/github/issues/cypress0522/AImage)](https://github.com/cypress0522/AImage/issues)[![](https://img.shields.io/github/issues-pr/cypress0522/AImage)](https://github.com/cypress0522/AImage/pulls)[![](https://img.shields.io/github/v/release/cypress0522/AImage?include_prereleases)](https://github.com/cypress0522/AImage/releases)
+[![](https://img.shields.io/github/last-commit/cypress0522/AImage)](https://github.com/cypress0522/AImage/commits/main)[![](https://img.shields.io/github/issues/cypress0522/AImage)](https://github.com/cypress0522/AImage/issues)[![](https://img.shields.io/github/issues-pr/cypress0522/AImage)](https://github.com/cypress0522/AImage/pulls)[![](https://img.shields.io/github/v/release/cypress0522/AImage)](https://github.com/cypress0522/AImage/releases)
+
 ### [Lua脚本版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/1)
 1. 下载。
 2. 修改后缀为`.lua`并放入`DiceQQ\plugin\`文件夹下。
