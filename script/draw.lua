@@ -1,10 +1,10 @@
-api = "http://proxy.nscc-gz.cn:38885/generate-dice"
-raw = msg.fromMsg
-tags = raw:sub(#'.naifu:' + 1)
-json = require("json")
-seed = ranint(0, 1919810)
-tab = {}
-prompt = "masterpiece, best quality, " .. tags
+local api = "http://proxy.nscc-gz.cn:38885/generate-dice"
+local tags = msg.fromMsg:sub(#'.naifu:' + 1)
+local json = require("json")
+local seed = ranint(0, 1919810)
+local prompt = "masterpiece, best quality, " .. tags
+
+local tab = {}
 tab["prompt"] = prompt
 tab["width"] = 512
 tab["height"] = 768
@@ -16,7 +16,8 @@ tab["n_samples"] = 1
 tab["ucPreset"] = 4
 tab["uc"] =
     "nsfw, lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
-data = json.encode(tab)
+
+local data = json.encode(tab)
 
 if msg.gid == 971050440 then
     sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)

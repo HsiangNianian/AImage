@@ -6,3 +6,11 @@ msg_reply.draw = {
         lua = "draw"
     }
 }
+msg_reply.delete = {
+    keyword = {
+        regex = {"(.*)/delete"}
+    },
+    echo = {
+        lua = "delete"
+    }
+}
