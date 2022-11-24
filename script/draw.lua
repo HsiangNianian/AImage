@@ -1,6 +1,6 @@
 local api = "http://261090.proxy.nscc-gz.cn:8888/"
 local raw = msg.fromMsg:sub(#".naifu:" + 1)
-local tags = raw:match("[A-Za-z0-9]+[^;]?") or "Baka"
+local tags = raw:match("[,%sA-Za-z0-9%{%}%(%)%[%]]+[^;]?") or "Baka"
 local kv = raw:match(";(.*)") or "Default Config"
 local json = require("json")
 local seed = ranint(0, 1919810)
