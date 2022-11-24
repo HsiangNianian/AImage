@@ -1,4 +1,4 @@
-local api = "http://proxy.nscc-gz.cn:38885/generate-dice"
+local api = "http://261090.proxy.nscc-gz.cn:8888/"
 local tags = msg.fromMsg:sub(#'.naifu:' + 1)
 local json = require("json")
 local seed = ranint(0, 1919810)
@@ -8,14 +8,13 @@ local tab = {}
 tab["prompt"] = prompt
 tab["width"] = 512
 tab["height"] = 768
-tab["scale"] = 12
-tab["sampler"] = "k_euler_ancestral"
+tab["cfg_scale"] = 12
+tab["n_iter"] = 1
 tab["steps"] = 20
 tab["seed"] = seed
-tab["n_samples"] = 1
-tab["ucPreset"] = 4
-tab["uc"] =
-    "nsfw, lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
+tab["batch_size"] = 1
+tab["sampler_index"] = "Euler"
+tab["negative_prompt"] = "nsfw, lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,sex"
 
 local data = json.encode(tab)
 
