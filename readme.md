@@ -1,5 +1,3 @@
-[![](https://img.shields.io/github/last-commit/cypress0522/AImage)](https://github.com/cypress0522/AImage/commits/main)[![](https://img.shields.io/github/issues/cypress0522/AImage)](https://github.com/cypress0522/AImage/issues)[![](https://img.shields.io/github/issues-pr/cypress0522/AImage)](https://github.com/cypress0522/AImage/pulls)[![](https://img.shields.io/github/v/release/cypress0522/AImage?include_prereleases)](https://github.com/cypress0522/AImage/releases)
-
 ### [Lua脚本版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/1)
 1. 下载。
 2. 修改后缀为`.lua`并放入`DiceQQ\plugin\`文件夹下。
@@ -8,8 +6,7 @@
 > tips:指令格式为:`AI绘画 xxx,xxx,xxx,xxx···`
 
 ### [Mod模块版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/2)
-
-
+[![](https://img.shields.io/github/last-commit/cypress0522/AImage)](https://github.com/cypress0522/AImage/commits/main)[![](https://img.shields.io/github/issues/cypress0522/AImage)](https://github.com/cypress0522/AImage/issues)[![](https://img.shields.io/github/issues-pr/cypress0522/AImage)](https://github.com/cypress0522/AImage/pulls)[![](https://img.shields.io/github/v/release/cypress0522/AImage?include_prereleases)](https://github.com/cypress0522/AImage/releases)
 - Dice版本2.6.5beta12(624+)以上安装方法:
 
  1. 在 `./DiceQQ/conf/mod/source.list`文件内（没有mod文件夹和这文件就新建）输入 
