@@ -1,5 +1,5 @@
 local api = "http://261090.proxy.nscc-gz.cn:8888/"
-local raw = msg.fromMsg:sub(#".naifu:"+1)
+local raw = msg.fromMsg:sub(#".naifu:" + 1)
 local tags = raw:match("[A-Za-z0-9]+[^;]?") or "Baka"
 local kv = raw:match(";(.*)") or "Default Config"
 local json = require("json")
@@ -21,11 +21,25 @@ tab["negative_prompt"] =
 
 local data = json.encode(tab)
 
-if msg.gid == 971050440 then
-    -- sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)
-    -- status, receive = http.post(api, data)
-    -- image = "[CQ:image,file=" .. receive .. "]"
-    return tags .. '\f' .. kv
-else
-    return "你没有权限哦!"
+local whlstfromGroup = {971050440, 10086}
+
+local whlstfromQQ = {2753364619, 1712724531}
+
+for k = 1, #whlstfromGroup do
+    if msg.gid == whlstfromGroup[k] then
+        sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)
+        status, receive = http.post(api, data)
+        image = "[CQ:image,file=" .. receive .. "]"
+        return image
+    end
 end
+
+for k = 1, #whlstfromQQ do
+    if msg.uid == whlstfromQQ[k] then
+        sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)
+        status, receive = http.post(api, data)
+        image = "[CQ:image,file=" .. receive .. "]"
+        return image
+    end
+end
+return "你没有权限哦~"
