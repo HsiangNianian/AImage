@@ -1,6 +1,7 @@
 local api = "http://261090.proxy.nscc-gz.cn:8888/"
-local tags = msg.fromMsg:match(".naifu:(.*)[;?]")
-local kv = msg.fromMsg:match(";(.*)")
+local raw = msg.fromMsg:sub(#".naifu:"+1)
+local tags = raw:match("[A-Za-z0-9]+[^;]?") or "Baka"
+local kv = raw:match(";(.*)") or "Default Config"
 local json = require("json")
 local seed = ranint(0, 1919810)
 local prompt = "masterpiece, best quality, " .. tags

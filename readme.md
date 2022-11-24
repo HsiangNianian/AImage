@@ -34,3 +34,7 @@
 ### Lua版与Mod模块版有何不同？
 1. 可支持的Dice!版本不同，Mod版本最低需要Dice! 2.6.4(612)的支持，而Lua版本范围更加宽泛，几乎所有Dice!版本都可以使用。
 2. 延展性不同。Lua版本~~较为简陋~~,更多的是让用户自己根据需要去修改脚本，比如添加白名单群或者指令次数上限等；而Mod版本更可能的会持续更新，你只需要`.mod update AImage`即可。
+
+### 附件
+1. [全部tag四万个.xlsx](https://ssjskfjdj.netlify.app/Download/%E5%85%A8%E9%83%A8tag%E5%9B%9B%E4%B8%87%E4%B8%AA.xlsx)
+2. [中英tag对照.xlsx](https://ssjskfjdj.netlify.app/Download/%E4%B8%AD%E8%8B%B1tag%E5%AF%B9%E7%85%A7.xlsx)
