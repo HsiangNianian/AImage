@@ -1,4 +1,5 @@
 # AImage
+> 基于stable-diffusion-webui的AI绘画脚本
 
 ### [Lua脚本版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/1)
 
