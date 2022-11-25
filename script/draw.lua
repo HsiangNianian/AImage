@@ -25,6 +25,8 @@ local whlstfromGroup = {971050440, 10086}
 
 local whlstfromQQ = {2753364619, 1712724531}
 
+if tags == "Baka" then return "有笨蛋！tags都不会写欸——但是我不说是谁*" end
+
 for k = 1, #whlstfromGroup do
     if msg.gid == whlstfromGroup[k] then
         sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)
