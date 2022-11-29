@@ -17,19 +17,19 @@ tab["seed"] = seed
 tab["batch_size"] = 1
 tab["sampler_index"] = "Euler"
 tab["negative_prompt"] =
-    "nsfw, lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,sex"
+"nsfw, lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,sex"
 
 local data = json.encode(tab)
 
-local whlstfromGroup = {971050440, 10086}
+local whlstfromGroup = { 971050440, 10086 }
 
-local whlstfromQQ = {2753364619, 1712724531}
+local whlstfromQQ = { 2753364619, 1712724531 }
 
 if tags == "Baka" then return "有笨蛋！tags都不会写欸——但是我不说是谁*" end
 
 for k = 1, #whlstfromGroup do
     if msg.gid == whlstfromGroup[k] then
-        sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)
+        sendMsg("t2i...", msg.fromGroup, msg.fromQQ)
         status, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
         return image
@@ -38,7 +38,7 @@ end
 
 for k = 1, #whlstfromQQ do
     if msg.uid == whlstfromQQ[k] then
-        sendMsg("绘图ing...", msg.fromGroup, msg.fromQQ)
+        sendMsg("t2i...", msg.fromGroup, msg.fromQQ)
         status, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
         return image
