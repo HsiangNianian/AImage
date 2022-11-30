@@ -1,9 +1,8 @@
 local api = "http://261090.proxy.nscc-gz.cn:8888/"
-local raw = msg.fromMsg:sub(#".naifu:" + 1)
-local tags = raw:match("[,%sA-Za-z0-9%{%}%(%)%[%]]+[^;]?") or "Baka"
-local kv = raw:match(";(.*)") or "Default Config"
+local raw = msg.fromMsg:sub(#"/t2i" + 1)
+local tags = raw:sub(#"/t2i"+1) or "Baka"
 local json = require("json")
-local seed = ranint(0, 1919810)
+-- local seed = ranint(0, 1919810)
 local prompt = "masterpiece, best quality, " .. tags
 
 local tab = {}
@@ -13,7 +12,7 @@ tab["height"] = 768
 tab["cfg_scale"] = 12
 tab["n_iter"] = 1
 tab["steps"] = 20
-tab["seed"] = seed
+tab["seed"] = -1
 tab["batch_size"] = 1
 tab["sampler_index"] = "Euler"
 tab["negative_prompt"] =
@@ -22,7 +21,6 @@ tab["negative_prompt"] =
 local data = json.encode(tab)
 
 local whlstfromGroup = { 971050440, 10086 }
-
 local whlstfromQQ = { 2753364619, 1712724531 }
 
 if tags == "Baka" then return "有笨蛋！tags都不会写欸——但是我不说是谁*" end
