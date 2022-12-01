@@ -42,11 +42,9 @@ end
 for k = 1, #whlstfromQQ do
     if msg.uid == whlstfromQQ[k] then
         sendMsg("i2i...", msg.fromGroup, msg.fromQQ)
-        status, receive = http.post(api, data)
+        __, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
         return image
     end
 end
 return "你没有权限哦~"
-
-return image
