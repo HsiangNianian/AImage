@@ -2,6 +2,7 @@
 > 基于stable-diffusion-webui的AI绘画脚本
 
 ### [Lua脚本版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/1)
+[upl-file uuid=33036bde-0b19-484c-9eae-eec65054af8b size=2kB]aimage-v103.txt[/upl-file]
 
 1. 下载。
 2. 修改后缀为 `.lua`并放入 `DiceQQ\plugin\`文件夹下。
@@ -26,7 +27,7 @@
     "comment":"",
     "repo":"https://ghproxy.com/https://github.com/ssJSKFJDJ/AImage.git",
     "helpdoc":{
-        "AImage":"AImage v1.1.1\n【.naifu:tags】与【/delete】\ngithub:https://github.com/ssJSKFJDJ/AImage/tree/master"
+        "AImage":"AImage v1.2.1\n【/t2i tags】与【/del】以及【/i2i tags】\ngithub:https://github.com/ssJSKFJDJ/AImage/tree/master"
     }
 }
 ```
@@ -51,16 +52,11 @@
  3. 使用 `.system load`命令重载。
  4. Enjoy Your Self!
 
-> tips:指令格式为:`.naifu:xxx,xxx,xxx···`
+> tips:指令格式为:`.t2i xxx,xxx,xxx···`与`/i2i xxx,xxx···`
 
 如果你的框架是Gocq，并且"用gocq监听15700端口的http请求"（端口可以更改，详见脚本）,那么你可以在回复骰娘消息时带上 `/delete`使骰娘撤回你引用回复的那条消息，这么做的目的是方便撤回一些奇奇怪怪的图片。
 
 关于v1.1.0更新的白名单机制:whlstfromQQ内的用户可触发指令，whlstfromGroup内的群聊用户可触发指令。
-
-### Lua版与Mod模块版有何不同？
-
-1. 可支持的Dice!版本不同，Mod版本最低需要Dice! 2.6.4(612)的支持，而Lua版本范围更加宽泛，几乎所有Dice!版本都可以使用。
-2. 延展性不同。Lua版本~~较为简陋~~,更多的是让用户自己根据需要去修改脚本，比如添加白名单群或者指令次数上限等；而Mod版本更可能的会持续更新，你只需要 `.mod update AImage`即可。
 
 ### Q&A
 1. 框架之间的CQ码问题
@@ -70,6 +66,12 @@
 2. 服务器访问问题
 > Q:为什么不管咱是什么框架，都不能出图捏？`Gocq`的或许还会返回一串CQ码。
 > A:这与阿尘的服务器有关，同一时间访问量过大和阿尘在服务器调试都有可能影响到，请过一会儿继续尝试。
+
+3. 版本问题
+> Q:Lua版与Mod模块版有何不同？
+> A:
+1. 可支持的Dice!版本不同，Mod版本最低需要Dice! 2.6.4(612)的支持，而Lua版本范围更加宽泛，几乎所有Dice!版本都可以使用。
+2. 延展性不同。Lua版本~~较为简陋~~,更多的是让用户自己根据需要去修改脚本，比如添加白名单群或者指令次数上限等；而Mod版本更可能的会持续更新，你只需要 `.mod update AImage`即可。
 
 ### 附件
 
