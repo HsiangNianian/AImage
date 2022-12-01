@@ -3,7 +3,7 @@ local raw = msg.fromMsg
 local images = raw:sub(#'/i2i' + 1)
 
 if not images:match("%[CQ:image") then return "笨蛋{nick},你的图呢？" end
--- 以图绘图核心
+-- 以图绘图核心:s
 if images:match('%[CQ:image(.*)http') then
     url = "https://" .. raw:match('https?://(.*)%]')
 else
@@ -33,4 +33,3 @@ sendMsg('i2i...', msg.fromGroup, msg.fromQQ)
 local _, receive = http.post(api, data)
 local image = '[CQ:image,file=' .. receive .. ']'
 return image
-
