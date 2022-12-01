@@ -19,8 +19,8 @@
 ```json
 {
     "mod":"AImage",
-    "author":"简律纯,Stardust·减",
-    "ver":"1.1.1",
+    "author":"简律纯&Stardust·减",
+    "ver":"1.2.1",
     "dice_build":612,
     "brief":"AI作画",
     "comment":"",
