@@ -2,10 +2,9 @@
 > 基于stable-diffusion-webui的AI绘画脚本
 
 ### [Lua脚本版本](https://forum.kokona.tech/d/1552-aihua-hua-ji-yu-naifu-apide-aihui-hua-jiao-ben/1)
-[upl-file uuid=33036bde-0b19-484c-9eae-eec65054af8b size=2kB]aimage-v103.txt[/upl-file]
 
-1. 下载。
-2. 修改后缀为 `.lua`并放入 `DiceQQ\plugin\`文件夹下。
+1. [下载](https://raw.githubusercontent.com/Stardust-minus/AImage/master/aimage-v103.lua)。
+2. 放入 `DiceQQ\plugin\`文件夹下。
 3. 使用 `.system load`命令重载bot。
 4. 发送 `.naifu:1girl`尝尝鲜。
 
