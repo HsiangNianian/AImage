@@ -1,12 +1,12 @@
 {
     "mod":"AImage",
     "author":"简律纯&Stardust·减",
-    "ver":"1.2.1",
+    "ver":"1.2.2",
     "dice_build":612,
     "brief":"AI作画",
     "comment":"",
     "repo":"https://ghproxy.com/https://github.com/ssJSKFJDJ/AImage.git",
     "helpdoc":{
-        "AImage":"AImage v1.2.1\n【/t2i tags】与【/del】以及【/i2i tags】\ngithub:https://github.com/ssJSKFJDJ/AImage/tree/master"
+        "AImage":"AImage v1.2.2\n【/t2i tags】与【/del】以及【/i2i tags】\ngithub:https://github.com/ssJSKFJDJ/AImage/tree/master"
     }
 }
