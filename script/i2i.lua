@@ -16,7 +16,7 @@ local tab = {}
 local prompt = 'masterpiece, best quality, ' .. images:gsub('%[(.*)%]', ' ')
 local whlstfromGroup = { 971050440, 10086 } --白名单群
 local whlstfromQQ = { 2753364619, 1712724531 } --白名单用户
-local enableTraslate = 1 -- 1为开启
+local enableTranslate = 1 -- 1为开启
 
 tab['prompt'] = prompt
 tab['width'] = 768
