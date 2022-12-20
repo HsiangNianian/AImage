@@ -42,7 +42,7 @@ for k = 1, #whlstfromGroup do
         image = "[CQ:image,file=" .. receive .. "]"
         return imagee
    else
-        sendMsg("t2i...(翻译已关闭)", msg.fromGroup, msg.fromQQ)
+        sendMsg("i2i...(翻译已关闭)", msg.fromGroup, msg.fromQQ)
         data = json.encode(tab)
         status, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
@@ -52,7 +52,7 @@ end
 
 for k = 1, #whlstfromQQ do
     if msg.uid == whlstfromQQ[k] and enableTranslate == 1 then
-        sendMsg("t2i...(翻译已开启，可能会损失部分信息，高阶魔法师建议关闭。)", msg.fromGroup, msg.fromQQ)
+        sendMsg("i2i...(翻译已开启，可能会损失部分信息，高阶魔法师建议关闭。)", msg.fromGroup, msg.fromQQ)
         requestApi = "https://ovooa.com/API/qqfy/api.php?type=male&msg=" .. prompt
         status , translatedPrompt = http.get(requestApi)
         tab["prompt"] = translatedPrompt
@@ -61,7 +61,7 @@ for k = 1, #whlstfromQQ do
         image = "[CQ:image,file=" .. receive .. "]"
         return imagee
     else
-        sendMsg("t2i...(翻译已关闭)", msg.fromGroup, msg.fromQQ)
+        sendMsg("i2i...(翻译已关闭)", msg.fromGroup, msg.fromQQ)
         data = json.encode(tab)
         status, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
