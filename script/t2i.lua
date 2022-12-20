@@ -16,18 +16,27 @@ tab["seed"] = -1
 tab["batch_size"] = 1
 tab["sampler_index"] = "Euler"
 tab["negative_prompt"] =
-"nsfw, lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,sex"
-
-local data = json.encode(tab)
+"nsfw,{{{ugly}}}, {{{duplicate}}}, {{morbid}}, {{mutilated}}, {{{tranny}}}, mutated hands,{{{poorly drawn hands}}}, blurry, {{bad anatomy}},{{{bad proportions}}}, extra limbs, cloned face,{{{disfigured}}}, {{{more than 2 nipples}}}, {{{{missing arms}}}},{{{extra legs}}},mutated hands,{{{{{fused fingers}}}}}, {{{{{too many fingers}}}}}, {{{unclear eyes}}}, lowers, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality,jpeg artifacts, signature, watermark, username, blurry, bad feet, text font ui,malformed hands, long neck, missing limb,{mutated hand and finger: 1.5},{long body: 1.3},{mutation poorly drawn: 1.2}, disfigured, malformed mutated, multiple breasts, futa, yaoi, {{{{:3}}}}, {{{3d}}},sex,nipple,pussy"
 
 local whlstfromGroup = { 971050440, 10086 } --白名单群
 local whlstfromQQ = { 2753364619, 1712724531 } --白名单用户
+local enableTranslate = 1 -- 1为开启
 
 if tags == "Baka" then return "有笨蛋！tags都不会写欸——但是我不说是谁*" end
 
 for k = 1, #whlstfromGroup do
-    if msg.gid == whlstfromGroup[k] then
-        sendMsg("t2i...", msg.fromGroup, msg.fromQQ)
+    if msg.gid == msg.gid == whlstfromGroup[k] and enableTranslate == 1 then
+        sendMsg("t2i...(翻译已开启，可能会损失部分信息，高阶魔法师建议关闭。)", msg.fromGroup, msg.fromQQ)
+        requestApi = "https://ovooa.com/API/qqfy/api.php?type=male&msg=" .. prompt
+        status , translatedPrompt = http.get(requestApi)
+        tab["prompt"] = translatedPrompt
+        data = json.encode(tab)
+        status, receive = http.post(api, data)
+        image = "[CQ:image,file=" .. receive .. "]"
+        return image
+    else
+        sendMsg("t2i...(翻译已关闭)", msg.fromGroup, msg.fromQQ)
+        data = json.encode(tab)
         status, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
         return image
@@ -35,8 +44,18 @@ for k = 1, #whlstfromGroup do
 end
 
 for k = 1, #whlstfromQQ do
-    if msg.uid == whlstfromQQ[k] then
-        sendMsg("t2i...", msg.fromGroup, msg.fromQQ)
+    if msg.uid == whlstfromQQ[k] and enableTranslate == 1 then
+        sendMsg("t2i...(翻译已开启，可能会损失部分信息，高阶魔法师建议关闭。)", msg.fromGroup, msg.fromQQ)
+        requestApi = "https://ovooa.com/API/qqfy/api.php?type=male&msg=" .. prompt
+        status , translatedPrompt = http.get(requestApi)
+        tab["prompt"] = translatedPrompt
+        data = json.encode(tab)
+        status, receive = http.post(api, data)
+        image = "[CQ:image,file=" .. receive .. "]"
+        return imagee
+    else
+        sendMsg("t2i...(翻译已关闭)", msg.fromGroup, msg.fromQQ)
+        data = json.encode(tab)
         status, receive = http.post(api, data)
         image = "[CQ:image,file=" .. receive .. "]"
         return image
