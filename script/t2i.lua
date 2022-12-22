@@ -25,7 +25,7 @@ local enableTranslate = 1 -- 1为开启
 if tags == "Baka" then return "有笨蛋！tags都不会写欸——但是我不说是谁*" end
 
 for k = 1, #whlstfromGroup do
-    if msg.gid == whlstfromGroup[k] and enableTranslate == 1 then
+    if msg.gid == msg.gid == whlstfromGroup[k] and enableTranslate == 1 then
         sendMsg("t2i...(翻译已开启，可能会损失部分信息，高阶魔法师建议关闭。)", msg.fromGroup, msg.fromQQ)
         requestApi = "https://ovooa.com/API/qqfy/api.php?type=male&msg=" .. prompt
         status , translatedPrompt = http.get(requestApi)
